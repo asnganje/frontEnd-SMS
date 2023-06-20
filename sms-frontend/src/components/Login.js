@@ -2,25 +2,36 @@ import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import '../styles/login.css'
-// import Student from "./Student";
+import Student from "./Student";
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [loginResponse, setLoginResponse] = useState(null)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     const loginSubmit = (e) => {
         e.preventDefault();
 
         axios.post('http://127.0.0.1:3000/login', {email, password})
             .then(res => {
-                console.log('res', res)
+                setLoginResponse(res.data)
+                setIsLoggedIn(true)
+                // console.log('res', res)
             })
             .catch(err=>{
                 console.log('err', err)
             })
 
-        console.log({email, password})
+        // console.log({email, password})   
     }
+
+    if(isLoggedIn) {
+        return(
+            <Student response={loginResponse}/>
+        )
+    }
+   
 
 
     return(
@@ -45,7 +56,7 @@ const Login = () => {
                 <p>Not registered? <Link to='/register'>Register</Link></p>
                 <p><Link to='/'>Revert to Home Page</Link></p>
             </div>
-
+            {/* { isLoggedIn && loginResponse && <Student response = {loginResponse}/>} */}
         </div>
     )
 }
