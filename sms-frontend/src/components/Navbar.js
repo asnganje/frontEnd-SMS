@@ -1,17 +1,17 @@
 import React from "react";
 import '../styles/navbar.css'
 import { Link } from "react-router-dom";
+import { navData } from "./data/data";
 
 const Navbar = () => {
     return (
         <div>
             <ul className="nav-container">
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/about'>About Us</Link></li>
-                <li><Link to='/admin'>Admin</Link></li>
-                <li><Link to='/student'>Student</Link></li>
-                <li><Link to='/teacher'>Teacher</Link></li>
-                <li><Link to='/login'>Login</Link></li>
+                {navData.map((navItem)=> {
+                    return (
+                        <li><Link to={navItem.link}>{navItem.text}</Link></li>
+                    )
+                })}
             </ul>
         </div>
     )

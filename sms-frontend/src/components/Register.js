@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import '../styles/register.css'
 import axios from "axios";
 
+
+
 const Register = () => {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -12,6 +14,7 @@ const Register = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+
         const user = {
             firstName,
             lastName,
@@ -20,6 +23,8 @@ const Register = () => {
             gender
         };
         
+
+
         axios.post('http://127.0.0.1:3000/register', {user})
             .then(res => {
                 console.log(res.data)
