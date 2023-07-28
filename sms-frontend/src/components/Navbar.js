@@ -9,7 +9,7 @@ const Navbar = () => {
             <ul className="nav-container">
                 {navData.map((navItem)=> {
                     return (
-                        <li><Link to={navItem.link}>{navItem.text}</Link></li>
+                        <li key={navItem.link}><Link to={navItem.link}>{navItem.text}</Link></li>
                     )
                 })}
             </ul>
