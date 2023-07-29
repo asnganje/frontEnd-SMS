@@ -7,11 +7,12 @@
     font-size: 20px;
     padding: 1rem;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    background-color: #4b4b4b;
+    box-shadow: 0 2px 8px rgba(133, 148, 201, 0.25);
+    background-color: #a2a5b0;
 }
 
 .nav-container li a{
-    color: #ffff;
-    text-decoration: white;
+    color: whitesmoke;
+    text-decoration: rgb(9, 7, 7);
+    font-weight: bold;
 }
