@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/frontEnd-SMS/static/css/main.89486bfb.css",
+    "main.js": "/frontEnd-SMS/static/js/main.66f7d33a.js",
+    "index.html": "/frontEnd-SMS/index.html",
+    "main.89486bfb.css.map": "/frontEnd-SMS/static/css/main.89486bfb.css.map",
+    "main.66f7d33a.js.map": "/frontEnd-SMS/static/js/main.66f7d33a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89486bfb.css",
+    "static/js/main.66f7d33a.js"
+  ]
+}
