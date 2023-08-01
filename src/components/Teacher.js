@@ -5,7 +5,7 @@ const Teacher = () => {
     return(
         <div>
             <Navbar />
-            <h1>Teachers page</h1>
+            <h1>Teachers admin page</h1>
         </div>
     )
 }
