@@ -1,15 +1,21 @@
-import React from "react";
 import '../styles/navbar.css'
 import { Link } from "react-router-dom";
 import { navData } from "./data/data";
 
-const Navbar = () => {
+const Navbar = ({user}) => {
+    let updatedData = []
+    if(user) {
+        updatedData = [...navData.filter((e)=>e.text !=='Login'), {text: "Logout", link: '/about'}]
+    } else {
+        updatedData = navData
+    }
+    
     return (
         <div>
             <ul className="nav-container">
-                {navData.map((navItem)=> {
+                {updatedData.map((navItem)=> {
                     return (
-                        <li key={navItem.link}><Link to={navItem.link}>{navItem.text}</Link></li>
+                        <li key={navItem.text}><Link to={navItem.link}>{navItem.text}</Link></li>
                     )
                 })}
             </ul>

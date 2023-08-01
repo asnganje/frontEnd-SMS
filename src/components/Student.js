@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar";
 
 const Student = () => {
     const [data, setData] = useState([])
@@ -16,6 +17,7 @@ const Student = () => {
 
     return(
         <div>
+            <Navbar />
             <h1>List of all our Students</h1>
             <div>
                 <table>

@@ -2,21 +2,22 @@ import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import '../styles/login.css'
-// import Student from "./Student";
 import ErrorModal from "./UI/ErrorModal";
 
-const Login = () => {
+const Login = ({setUser}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    // const [loginResponse, setLoginResponse] = useState(null)
     const [error, setError] = useState()
+
+
+    
     const loginSubmit = (e) => {
         e.preventDefault();
 
         axios.post('http://127.0.0.1:3000/login', {email, password})
             .then(res => {
-                // setLoginResponse(res.data)
-                // console.log('res', res)
+                setUser(true)
+ 
             })
             .catch(err=>{
                 console.log(err)
@@ -26,9 +27,8 @@ const Login = () => {
                 })
                 return;
             })
-
-        // console.log({email, password})   
     }
+
 
 
     const handleErrorModal = () => {
@@ -59,9 +59,8 @@ const Login = () => {
                         <button className="loginBtn">Login</button>
                     </form>
                     <p>Not registered? <Link to='/register'>Register</Link></p>
-                    <p><Link to='/'>Revert to Home Page</Link></p>
+                    <p><Link to='/'>Back to Home</Link></p>
                 </div>
-                {/* { isLoggedIn && loginResponse && <Student response = {loginResponse}/>} */}
             </div>
         </>
     )
