@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/frontEnd-SMS/static/css/main.89486bfb.css",
-    "main.js": "/frontEnd-SMS/static/js/main.66f7d33a.js",
+    "main.css": "/frontEnd-SMS/static/css/main.c8ac1f0e.css",
+    "main.js": "/frontEnd-SMS/static/js/main.2741918b.js",
+    "static/media/school.png": "/frontEnd-SMS/static/media/school.ecf8d0e01a2a6140f367.png",
     "index.html": "/frontEnd-SMS/index.html",
-    "main.89486bfb.css.map": "/frontEnd-SMS/static/css/main.89486bfb.css.map",
-    "main.66f7d33a.js.map": "/frontEnd-SMS/static/js/main.66f7d33a.js.map"
+    "main.c8ac1f0e.css.map": "/frontEnd-SMS/static/css/main.c8ac1f0e.css.map",
+    "main.2741918b.js.map": "/frontEnd-SMS/static/js/main.2741918b.js.map"
   },
   "entrypoints": [
-    "static/css/main.89486bfb.css",
-    "static/js/main.66f7d33a.js"
+    "static/css/main.c8ac1f0e.css",
+    "static/js/main.2741918b.js"
   ]
 }
