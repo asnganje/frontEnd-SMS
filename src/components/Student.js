@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
+import '../styles/student.css'
 
 const Student = () => {
     const [data, setData] = useState([])
+
     useEffect(()=> {
         axios.get('http://127.0.0.1:3000/api/users')
         .then((response)=> {
@@ -18,8 +20,8 @@ const Student = () => {
     return(
         <div>
             <Navbar />
-            <h1>List of all our Students</h1>
-            <div>
+            <h1 className="students-header">Students List</h1>
+            <div className="table-container">
                 <table>
                     <thead>
                         <tr>

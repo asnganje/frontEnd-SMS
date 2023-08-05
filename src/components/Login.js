@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios'
 import '../styles/login.css'
 import ErrorModal from "./UI/ErrorModal";
+import Navbar from "./Navbar";
 
 const Login = ({setUser}) => {
     const [email, setEmail] = useState('')
@@ -54,6 +55,7 @@ const Login = ({setUser}) => {
                             <input 
                             onChange={e=>setPassword(e.target.value)}
                             value={password}
+                            type="password"
                             placeholder="Password"/>
                         </div>
                         <button className="loginBtn">Login</button>

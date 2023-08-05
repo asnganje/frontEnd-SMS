@@ -1,0 +1,49 @@
+.students-header {
+    text-align: center;
+}
+
+.table-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: #007bff; /* Replace with your preferred header background color */
+    color: #fff; /* Adjust the header text color */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+  }
+  
+  tbody tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #f0f0f0; 
+    cursor: pointer;
+  }
+  
+  

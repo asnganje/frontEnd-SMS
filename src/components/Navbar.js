@@ -5,7 +5,7 @@ import { navData } from "./data/data";
 const Navbar = ({user}) => {
     let updatedData = []
     if(user) {
-        updatedData = [...navData.filter((e)=>e.text !=='Login'), {text: "Logout", link: '/about'}]
+        updatedData = [...navData.filter((e)=>e.text !=='Login'), {text: "Logout", link: '/login'}]
     } else {
         updatedData = navData
     }
