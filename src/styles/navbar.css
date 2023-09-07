@@ -1,19 +1,149 @@
-.nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style-type: none;
-    margin: 20px 5px;
-    font-size: 20px;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(133, 148, 201, 0.25);
-    background-color: rgb(59, 17, 59);
-    position: relative;
+h1 {
+  margin: 0;
 }
 
-.nav-container li a{
-    color: whitesmoke;
-    text-decoration: rgb(9, 7, 7);
-    font-weight: bold;
+nav {
+    background: var(--white);
+    box-shadow: var(--shadow-1);
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle {
+    font-size: 1rem;
+    color: rgb(245, 245, 245);
+    background: rgb(23, 175, 162);
+    border-color: transparent;
+    border-radius: 5px;
+    animation: bounce 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+  0%{transform: scale(1);}
+  50%{transform: scale(1.5);}
+  100%{transform: scale(1);}
+}
+.nav-toggle:hover {
+    color: white;
+    transform: rotate(90deg);
+}
+
+.schoolLogo {
+    height: 40px;
+}
+
+.links a{
+    color: rgb(255, 154, 47);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    background: var(--primary-100);
+    color: greenyellow;
+    padding-left: 2rem;
+    margin-left: 2rem;
+}
+
+.logoutBtn {
+  color: rgb(255, 154, 47);
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.logoutBtn:hover {
+  background: black;
+  color: yellow;
+  padding: 1rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+}
+
+
+.links-container {
+    overflow: hidden;
+    height: 0;
+    transition: var(--transition);
+}
+
+.show-container {
+    height: 20rem;
+}
+
+.social-icons {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-toggle {
+      display: none;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .links-container {
+      height: auto !important;
+    }
+    .links {
+      display: flex;
+      gap: 1rem;
+    }
+    .links a {
+      padding: 0;
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+    }
+    .social-icons {
+      display: flex;
+      font-size: 180%;
+      gap: 0.8rem;
+    }
+    .social-icons a {
+      color: var(--primary-500);
+      transition: var(--transition);
+    }
+    .social-icons a:hover {
+      color: var(--primary-300);
+    }
+
+    .logoutBtn {
+      margin-top: 0;
+    }
+
+  }
+  

@@ -1,9 +1,8 @@
-import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import Admin from './components/Admin';
-import About from './components/About'
+import Parent from './components/Parent'
 import Student from './components/Student'
 import Teacher from './components/Teacher'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -18,7 +17,7 @@ function App() {
             <Route path='/admin' element={<Admin/>}/>
             <Route path='/student' element={<Student/>}/>
             <Route path='/teacher' element={<Teacher/>}/>
-            <Route path='/about' element={<About/>}/>
+            <Route path='/parent' element={<Parent/>}/>
         </Routes>
     </BrowserRouter>
   );

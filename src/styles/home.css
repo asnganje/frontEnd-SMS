@@ -5,13 +5,11 @@
     min-height: 42vh;
     justify-content: center;
     background-color: #f9f9f9;
-
-}
-.main-header {
-    font-size: 36px;
-    margin: 15px;
-    color: #333;
-    text-align: center;
 }
 
-
+.welcome-info {
+    font-size: 15px;
+    font-weight: 800;
+    color: green;
+    margin-left: 5rem;
+  }

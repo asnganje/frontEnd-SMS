@@ -1,45 +1,45 @@
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import '../styles/login.css'
 import ErrorModal from "./UI/ErrorModal";
-import Navbar from "./Navbar";
+import Loading from "./Loading";
 
-const Login = ({setUser}) => {
+const Login = ({setUser, getOnlineUser}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState()
+    const [isLoading, setIsLoading] = useState(false)
 
 
     
-    const loginSubmit = (e) => {
+    const loginSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true)
 
-        axios.post('http://127.0.0.1:3000/login', {email, password})
-            .then(res => {
-                setUser(true)
- 
-            })
-            .catch(err=>{
-                console.log(err)
+            try {
+                const response =  await axios.post('http://127.0.0.1:3000/login', {email, password})
+                localStorage.setItem('user', true)
+                setUser(true) 
+                const onlineUser = (response.data.firstName) 
+                getOnlineUser(onlineUser)              
+            } 
+            catch (error) {
                 setError({
                     title: "Invalid input",
-                    message: "Wrong password and email combination"
+                    message: "Incorrect"
                 })
-                return;
-            })
+            }   
+            setIsLoading(false)         
     }
-
-
-
+    
     const handleErrorModal = () => {
         setError(null)
     }
 
-
-
     return(
         <>
+            {isLoading && <Loading />}
             {error && <ErrorModal errorHandler = {handleErrorModal} title = {error.title} message = {error.message}/>}
             <div className="login-container">
                 <h1>Welcome User</h1>

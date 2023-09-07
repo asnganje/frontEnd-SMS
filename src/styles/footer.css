@@ -3,28 +3,14 @@
     text-align: center;
     padding-left: 2rem;
     padding-right: 2rem;
-
   }
 
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-    list-style: none;
-  }
-
-  .footer-icon {
-    font-size: 2rem;
-    margin-right: 1rem;
-  }
-  .footer-icon:hover {
-    color: var(--clr-primary-5);
-  }
   .copyright {
-    text-transform: capitalize;
     letter-spacing: var(--spacing);
     color: var(--clr-white);
+    margin: 3%;
+    font-size: 20px;
+    font-weight: 800;
   }
   .copyright span {
     margin-left: 0.5rem;

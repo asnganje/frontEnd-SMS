@@ -1,16 +1,18 @@
+import {nanoid} from 'nanoid'
+import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
+
 export const navData = [
-    {text: "Home", link: '/'},
-    {text: "About Us", link: '/about'},
-    {text: "Admin", link: '/admin'},
-    {text: "Students", link: '/student'},
-    {text: "Teacher", link: '/teacher'},
-    {text: "Login", link: '/login'}
+    {id: nanoid(), url: '/', text: "Home"},
+    {id: nanoid(), url: '/teacher', text: "Teacher"},
+    {id: nanoid(), url: '/parent', text: "Parent"},
+    {id: nanoid(), url: '/student', text: "Student"},
+    // {id: nanoid(), url: '/login', text: "Login"}
 ]
 
 export const socialIcons = [
-    {id: 1, href:"https://www.facebook.com", icon:"fab fa-facebook"},
-    {id: 2, href:"https://www.twitter.com", icon:"fab fa-twitter"},
-    {id: 3, href:"https://www.squarespace.com", icon:"fab fa-squarespace"}
+    {id: nanoid(), url:"https://www.facebook.com", icon:<FaFacebook />},
+    {id: nanoid(), url:"https://www.linkedin.com", icon:<FaLinkedin />},
+    {id: nanoid(), url:"https://www.twitter.com", icon:<FaTwitter />}
 ] 
 
 export const keyActivities = [
