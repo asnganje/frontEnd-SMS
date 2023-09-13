@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import '../styles/student.css'
+import AddedParent from './AddedParent'
 
 const Student = () => {
     const [data, setData] = useState([])
 
+// users as students
     useEffect(()=> {
         axios.get('http://127.0.0.1:3000/api/users')
         .then((response)=> {
@@ -30,6 +32,7 @@ const Student = () => {
                             <td>LastName</td>
                             <td>Email</td>
                             <td>Gender</td>
+                            <td>Parent</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,6 +44,7 @@ const Student = () => {
                                     <td>{item.lastName}</td>
                                     <td>{item.email}</td>
                                     <td>{item.gender}</td>
+                                    <td>{<AddedParent studentId = {item.id}/>}</td>
                                 </tr>            
                             )
                         })}
